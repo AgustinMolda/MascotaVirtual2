@@ -17,6 +17,7 @@ public class Pet {
 		this.estado =	iniciarEsado();
 		saludar();
 		dameSaludo();
+		tomarTiempo();
 			
 	}
 	
@@ -102,17 +103,18 @@ public class Pet {
 		}
 	
 	private void tomarTiempo() {
+		 boolean loop = true;
 			this.tiempo = 0;
+			while(loop) {
 			while(tiempo < 101) {
 				tiempo++;
 				if(tiempo>80 && this.estado.equals("aburrida")){
 					
 						this.estado = "contenta";
 				}
-				/*if(tiempo==99){
-					tiempo = 0;
-				}	*/
+				loop = false;
 			}
+		}	
 	}
 
 	
@@ -128,7 +130,7 @@ public class Pet {
 			
 		}
 		
-		tomarTiempo();
+		
 		
 	}
 	
